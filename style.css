@@ -1,0 +1,75 @@
+/*== Bases ==*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --title-font: 'Signika Negative', sans-serif;
+    --text-font: 'Sarabun', sans-serif;
+    --title-size: 8rem;
+    --subtitle-size: calc(var(--title-size) / 2.5);
+}
+
+.flex{
+    display: flex;
+}
+
+.title{
+    font: 600 var(--title-size) var(--title-font);
+
+}
+
+.subtitle{
+    font: 100 var(--subtitle-size) var(--text-font);
+}
+
+
+/*- colors -*/
+
+
+/*== Navbar ==*/
+#navbar{
+    background: #03738C;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#navbar .container{
+    padding: 1rem 0 1rem 1rem; 
+    justify-content: flex-end;
+}
+
+#navbar ul li{
+    list-style-type: none;
+}
+
+#navbar a{
+    font: bold 3.2rem 'Signika Negative', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 7.4rem;
+}
+
+#welcome .container{
+    background: linear-gradient(50deg, rgba(252,252,252,1) 0%, rgba(0,129,154,0.76234243697479) 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+p{
+    font-family: 'Sarabun', sans-serif;
+}
