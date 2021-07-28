@@ -1,64 +1,69 @@
 /*== Bases ==*/
-/* @import url('https://fonts.googleapis.com/css2?family=Sarabun&family=Signika+Negative&display=swap'); */
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
 }
 
-
-html{
+html {
     scroll-behavior: smooth;
+    background: var(--base-color);
 }
 
-:root{
-    --title-font: 'Signika Negative', sans-serif;
-    --text-font: 'Sarabun', sans-serif;
+:root {
+    --title-font: "Signika Negative", sans-serif;
+    --text-font: "Sarabun", sans-serif;
     --main-title-size: 4rem;
-    --title-size: calc(var(--main-title-size) - 2rem);
+    --title-size: calc(var(--main-title-size) - 1.5rem);
     --subtitle-size: calc(var(--main-title-size) / 2);
-    --text-size: calc(var(--main-title-size) * 0.30);
+    --text-size: calc(var(--main-title-size) * 0.4);
+
+    /*--Colors--*/
+    --navbar-color: #022601;
+    --borders-color: #0E400C;
+    --base-color: #ADD4D9;
+    --title-color: #F22D1B;
+    --text-color: #BF4539;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.grid{
-    display: grid
+.grid {
+    display: grid;
 }
 
-ul li{
+ul li {
     list-style-type: none;
 }
 
-header h2{
+header h2 {
     text-align: center;
     font-size: var(--title-size);
     font-family: var(--title-font);
+    color: var(--title-color);
+    margin-top: 3rem;
 }
 
 
-/*--Colors--*/
 
 /*== Navbar ==*/
-#navbar{
+#navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: black;
-    box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.4);
+    background: var(--navbar-color);
+    box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
-#navbar ul{
+#navbar ul {
     justify-content: flex-end;
 }
 
-#navbar a{
+#navbar a {
     display: block;
     text-decoration: none;
     color: white;
@@ -67,101 +72,111 @@ header h2{
     padding: 2rem;
 }
 
-#navbar a:hover{
+#navbar a:hover {
     position: relative;
     background-color: white;
-    color: black;
+    color: var(--title-color);
 }
 
 /*== Welcome ==*/
-#welcome-section{
+#welcome-section {
     height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background: linear-gradient(34deg, rgba(252,252,252,0) 0%, rgba(255,255,255,1) 65%);
 }
 
-#main-title{
+#main-title {
     font-size: var(--main-title-size);
     font-family: var(--title-font);
+    color: var(--title-color);
 }
 
-#main-subtitle{
+#main-subtitle {
     font-size: var(--subtitle-size);
     font-family: var(--text-font);
+    color: var(--text-color)
 }
 
 /*== Projects ==*/
-.cards{
+.cards {
     gap: 10px;
     grid-template-columns: 1fr;
     padding: 10px;
+    margin-bottom: 3rem;
 }
 
-.card{
+.card {
     padding: 10px;
-    border: 1px solid black;
+    border: 3px solid var(--borders-color);
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(255, 255, 255, 0.30);
 }
 
-img{
+img {
     width: 100%;
     height: auto;
 }
 
-.caption{
+.caption {
     font-size: var(--text-size);
     font-family: var(--text-font);
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 /*== Contact ==*/
-#contact ul{
+#contact ul {
     justify-content: space-evenly;
 }
 
-#contact ul li{
+#contact ul li {
     transition: 0.2s;
     padding: 0.7rem;
 }
 
-#contact ul li:hover{
+#contact ul li:hover {
     transform: translateY(-8%);
 }
 
-#contact ul li a{
+#contact ul li a {
     text-decoration: none;
-    font-size: calc(var(--text-size) * 1.2);
+    font-size: var(--text-size);
     font-family: var(--text-font);
-    color: black;
+    color: var(--text-color);
 }
 
-
+#contact i{
+    font-size: var(--text-size);
+}
 
 /*== Footer ==*/
 
-footer{
-    background: black;
+footer {
+    background: var(--navbar-color);
     padding: 0.7rem;
-
+    margin-top: 3rem;
 }
 
-footer p{
+footer p {
     color: white;
     text-align: end;
     font-family: var(--text-font);
+    font-size: calc(var(--text-size) / 1.35);
 }
 
+
 /*== Media ==*/
-@media(min-width: 768px){
-/*== Bases ==*/
-    :root{
+@media (min-width: 768px) {
+    /*== Bases ==*/
+    :root {
         --main-title-size: 6rem;
-    }
-
-
-
+        --title-size: calc(var(--main-title-size) - 3rem);
+        --text-size: calc(var(--main-title-size) * 0.3);
+    }   
     /*== Projects ==*/
-    .cards{
+    .cards {
         grid-template-columns: 1fr 1fr;
     }
 }
