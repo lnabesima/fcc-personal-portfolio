@@ -4,89 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&family=Sarabun&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+    <!--Style-->
+    <link rel="stylesheet" href="style2.css">
 
     <title>FCC Portfolio</title>
 </head>
 <body>
     <header>
         <nav id="navbar">
-            <ul class="container flex">
-                <li>
-                    <a href="#welcome" class="nav-link">About</a>
-                </li>
-                <li>
-                    <a href="#projects" class="nav-link">Work</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <ul class="flex">
+                <li><a href="#welcome" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="welcome">
-            <!--This is the 'welcome' section of the page. Here I'll fill some personal info, I guess?-->
-            <div class="container flex">
-                <h1 class="title">Hey there, I'm Lucas! &#128075;</h1>
-                <p class="subtitle">Aspiring front-end developer.</p>
-            </div>
+        <section id="welcome-section" class="flex">
+            <h1 id="main-title">Hey there, I'm Lucas.</h1>
+            <p id="main-subtitle">Aspiring front-end developer.</p>
         </section>
 
         <section id="projects">
-            <!--The 'projects' section should showcase some of my works. At smaller viewports, the page should display just one card each row; 2 cards with medium viewports and 4 at bigger (desktop/laptop) devices.-->
-            <div class="container">
-                <header>
-                    <h2>Some of my works.</h2>
-                </header>
-                <div class="cards">
-                    <div class="card">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis provident officiis nemo consequatur dolorum atque sequi tenetur veritatis ad nostrum. Ad tenetur reprehenderit maxime maiores voluptates ducimus sapiente nemo facilis.
-                        <p class="caption">BeautySalon</p>
-                    </div>
-    
-                    <div class="card">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tenetur nemo vitae minus! Deserunt quam tempora aperiam amet quisquam nam est, corrupti, ex, consequuntur nihil laudantium minima illo repellendus! Neque?
-                        <p class="caption">Tribute Page - César Lattes</p>
-                    </div>
-    
-                    <div class="card">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis non eligendi facilis, id debitis consectetur autem voluptas, ea illum, doloribus tenetur nihil distinctio assumenda hic dolore ex aut! Adipisci, soluta?
-                        <p class="caption">Survey Form -  Financing Options</p>
-                    </div>
-    
-                    <div class="card">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, eum inventore quod nulla id magnam sed dolores magni rerum porro ipsa quaerat quia illo ex culpa distinctio officia dicta? Et.
-                        <p class="caption">Landing Page - DUCKS!</p>
-                    </div>
+            <header>
+                <h2 class="title">Some of my works</h2>
+            </header>
+            <div class="cards grid">
+                <div class="card project-tile">
+                    <img src="https://i.ibb.co/cTr0HSb/JqzQgjY.png" alt="" srcset="">
+                    <a href="https://github.com/lnabesima/nlw6-beautysalon" class="caption">BeautySalon</a>
+                </div>
+
+                <div class="card project-tile">
+                    <img src="https://i.ibb.co/YXm4VhY/image.png" alt="" srcset="">
+                    <a href="https://codepen.io/lnabesima/full/XWMwGoq" class="caption">Tribute Page - César Lattes</a>
+                </div>
+
+                <div class="card project-tile">
+                    <img src="https://i.ibb.co/qgK06Kq/image.png" alt="" srcset="">
+                    <a href="https://codepen.io/lnabesima/full/wvdwQdY" class="caption">Survey Form -  Financing Options</a>
+                </div>
+
+                <div class="card project-tile">
+                    <img src="https://i.ibb.co/WFmNSJc/image.png" alt="" srcset="">
+                    <a href="https://codepen.io/lnabesima/full/WNjbPqZ" class="caption ">Landing Page - DUCKS!</a>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-        <!--Contact section. Should display social media links and GitHub link as well.-->
-            <div class="container">
+            <header>
                 <h2 class="title">Get in touch!</h2>
-                <ul>
-                    <li><a href="https://twitter.com/lucasnabesima" class="contact-links">Twitter</a></li>
-                    <li><a href="https://github.com/lnabesima" class="contact-links">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/lucasnabesima/" class="contact-links">LinkedIn</a></li>
-                    <li><a href="mailto:lucas.nabesima@gmail.com" class="contact-links">Email</a></li>
-                </ul>
+            </header>
+            <div class="container">
+                <ul class="flex">
+                    <li><a href="https://twitter.com/lucasnabesima" class="contact-links" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/lnabesima" id="profile-link" class="contact-links " target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/lucasnabesima/" class="contact-links" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:lucas.nabesima@gmail.com" class="contact-links" target="_blank">Email</a></li>
                 </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p class="footer-text">20XX - Developed with care by Nabesima.</p>
-        </div>
+        <p class="footer-text">20XX - Developed with care by Nabesima.</p>
     </footer>
 </body>
 </html>
